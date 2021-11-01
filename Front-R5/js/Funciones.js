@@ -6,7 +6,7 @@ $(document).ready(function(){
 function autoInicioCategoria(){
     console.log("se esta ejecutando")
     $.ajax({
-        url: "http://150.230.78.45:8080/api/Category/all",
+        url: "http://150.230.91.159:8080/api/Category/all",
         type: "GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -26,7 +26,7 @@ function autoInicioCategoria(){
 
 function traerInformacionCategorias(){
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Category/all",
+        url:"http://150.230.91.159:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -61,7 +61,7 @@ function guardarInformacionCategorias(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.78.45:8080/api/Category/save",
+        url:"http://150.230.91.159:8080/api/Category/save",
        
                 
         success:function(response) {
@@ -91,7 +91,7 @@ function borrarInformacionCategorias(idElemento){
     let dataToSend=JSON.stringify(elemento);
     
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Category/"+idElemento,
+        url:"http://150.230.91.159:8080/api/Category/"+idElemento,
         type:'DELETE',
         data:dataToSend,
         contentType:'application/JSON',
@@ -119,7 +119,7 @@ function actualizarInformacionCategorias(idCategoria){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Category/update",
+        url:"http://150.230.91.159:8080/api/Category/update",
         type:'PUT',
         data:dataToSend,
         contentType:'application/json',
@@ -153,7 +153,7 @@ $(document).ready(function(){
 
 function traerInformacionClient(){
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Client/all",
+        url:"http://150.230.91.159:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -192,7 +192,7 @@ function guardarInformacionClient(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.78.45:8080/api/Client/save",
+        url:"http://150.230.91.159:8080/api/Client/save",
        
                 
         success:function(response) {
@@ -218,7 +218,7 @@ function borrarInformacionClient(idClient){
     let dataToSend=JSON.stringify(elemento);
     
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Client/"+idClient,
+        url:"http://150.230.91.159:8080/api/Client/"+idClient,
         type:'DELETE',
         data:dataToSend,
         contentType:'application/JSON',
@@ -249,7 +249,7 @@ function actualizarInformacionClient(idElemento){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Client/update",
+        url:"http://150.230.91.159:8080/api/Client/update",
         type:'PUT',
         data:dataToSend,
         contentType:'application/json',
@@ -284,7 +284,7 @@ $(document).ready(function(){
 
 function traerInformacionMessage(){
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Message/all",
+        url:"http://150.230.91.159:8080/api/Message/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -321,7 +321,7 @@ function guardarInformacionMessage(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.78.45:8080/api/Message/save",
+        url:"http://150.230.91.159:8080/api/Message/save",
        
                 
         success:function(response) {
@@ -347,7 +347,7 @@ function borrarInformacionMessage(idMessage){
     let dataToSend=JSON.stringify(elemento);
     
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Message/"+idMessage,
+        url:"http://150.230.91.159:8080/api/Message/"+idMessage,
         type:'DELETE',
         data:dataToSend,
         contentType:'application/JSON',
@@ -377,7 +377,7 @@ function actualizarInformacionMessage(idElemento){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Message/update",
+        url:"http://150.230.91.159:8080/api/Message/update",
         type:'PUT',
         data:dataToSend,
         contentType:'application/json',
@@ -412,7 +412,7 @@ $(document).ready(function(){
 function autoInicioOrtopedic(){
     console.log("se esta ejecutando")
     $.ajax({
-        url: "http://150.230.78.45:8080/api/Ortopedic/all",
+        url: "http://150.230.91.159:8080/api/Ortopedic/all",
         type: "GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -431,7 +431,7 @@ function autoInicioOrtopedic(){
 
 function traerInformacionOrtopedic(){
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Ortopedic/all",
+        url:"http://150.230.91.159:8080/api/Ortopedic/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -472,7 +472,7 @@ function guardarInformacionOrtopedic(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.78.45:8080/api/Ortopedic/save",
+        url:"http://150.230.91.159:8080/api/Ortopedic/save",
        
                 
         success:function(response) {
@@ -498,7 +498,7 @@ function borrarInformacionOrtopedic(idElemento){
     let dataToSend=JSON.stringify(elemento);
     
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Ortopedic/"+idElemento,
+        url:"http://150.230.91.159:8080/api/Ortopedic/"+idElemento,
         type:'DELETE',
         data:dataToSend,
         contentType:'application/JSON',
@@ -528,7 +528,7 @@ function actualizarInformacionOrtopedic(idOrtopedic){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Ortopedic/update",
+        url:"http://150.230.91.159:8080/api/Ortopedic/update",
         type:'PUT',
         data:dataToSend,
         contentType:'application/json',
@@ -564,7 +564,7 @@ $(document).ready(function(){
 
 function traerInformacionReservation(){
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Reservation/all",
+        url:"http://150.230.91.159:8080/api/Reservation/all",
         type:"GET",
         datatype:"JSON",
         success:function(response){
@@ -601,7 +601,7 @@ function guardarInformacionReservation(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://150.230.78.45:8080/api/Reservation/save",
+        url:"http://150.230.91.159:8080/api/Reservation/save",
        
                 
         success:function(response) {
@@ -631,7 +631,7 @@ function borrarInformacionReservation(idElemento){
     let dataToSend=JSON.stringify(elemento);
     
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Reservation/"+idElemento,
+        url:"http://150.230.91.159:8080/api/Reservation/"+idElemento,
         type:'DELETE',
         data:dataToSend,
         contentType:'application/JSON',
@@ -658,7 +658,7 @@ function actualizarInformacionReservation(idElemento){
     let dataToSend=JSON.stringify(myData);
 
     $.ajax({
-        url:"http://150.230.78.45:8080/api/Reservation/update",
+        url:"http://150.230.91.159:8080/api/Reservation/update",
         type:'PUT',
         data:dataToSend,
         contentType:'application/json',
