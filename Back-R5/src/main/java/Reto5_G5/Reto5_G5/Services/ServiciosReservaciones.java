@@ -23,7 +23,13 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
+/**
+ * Clase principal del servicio de reservaciones
+ */
 public class ServiciosReservaciones {
+    /**
+     * conexion del servicio con los metodos crud
+     */
      @Autowired
     private RepositorioReservaciones metodosCrud;
 
@@ -92,9 +98,9 @@ public class ServiciosReservaciones {
     }
 
     /**
-     *
+     * 
      * @param reservationId
-     * @return
+     * 
      */
     public boolean deleteReservation(int reservationId) {
         Boolean aBoolean = getReservation(reservationId).map(reservation -> {
@@ -105,8 +111,8 @@ public class ServiciosReservaciones {
     }
 
     /**
-     *
-     * @return
+     * 
+     * @return 
      */
     public StatusReservas reporteStatusServicio (){
 	        List<Reservaciones>completed= metodosCrud.ReservacionStatusRepositorio("completed");
