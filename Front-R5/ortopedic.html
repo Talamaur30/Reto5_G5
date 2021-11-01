@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Funciones.js"></script> 
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css"> 
+    <title>Ortopedico</title>
+</head>
+<body>
+             <!-- INICIO NAVBAR -->
+             <nav class="navbar navbar-expand-lg navbar-dark bg-light navBar navbar fixed-top border-bottom border-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo.png" alt="LOGO" width="300">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Registrar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Iniciar sesión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">Sobre Nosotros</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Servicios
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="category.html">Categorias</a></li>
+                                  <li><a class="dropdown-item" href="ortopedic.html">Ortopedicos</a></li>
+                                  <li><a class="dropdown-item" href="client.html">CLientes</a></li>
+                                  <li><a class="dropdown-item" href="message.html">Mensajes</a></li>
+                                  <li><a class="dropdown-item" href="reservation.html">Reservaciones</a></li>
+                                </ul>
+                              </li>
+                        </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+                </nav>
+            <!-- FIN NAVBAR -->
+        
+            <!-- SEPARADOR-->
+                <br><br><br><br><br>
+                <div class="container-fluid pt-3">
+                    <div class="row">
+                        <div id="separator1">
+                            <div class="content ">
+                                <h3 class="text-center pt-2.5 h1 text-light  ">GESTIONA ORTOPEDICOS</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- CREACION DE TABLA -->
+                <div class="container-md ">
+                    <div class="consultar mt-4">
+                        <div class="row">
+                            <div class="col-6 pb-3 pt-3 text-danger">
+                                <div class="h1">Lista de Ortopedicos</div>
+                            </div>
+        
+                        </div>
+                        <div class="card sm-5 card-cat mb-5">
+                            <div class="box-body text-center">
+                                <div class="table table-responsive ">
+                                    <table class="table table-hover text-light">
+                                        <thead>
+                                            <tr>
+                                                <th>id</th>
+                                                <th>Nombre</th>
+                                                <th>Marca</th>
+                                                <th>Año</th>
+                                                <th>Categoria</th>                                                
+                                                <th>Descripción</th>
+                                                <th>Opciones</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tBodyOrtopedic">
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+        
+                    <!-- GUARDAR ORTOPEDIC -->
+                    <div class="row">
+                        <div class="col-4 text-center">
+                            <div class="card card-cat mb-5 mx-50 " style="width: 18rem;">
+        
+                                <div class="card-body">
+                                    <div class="formulario py-5">
+                                        <div class="col-md-12 text-center text-light ">
+                                            <h2>Crea un nuevo ortopedico</h2>
+                                        </div>
+                                        <div class="col-12 text-start text-light ">
+                                            <form id="formularioOrtopedic">
+                                            <label>Nombre:</label>
+                                            <div class=" text-center">
+                                                    <input id="Oname" type="text">
+                                            </div>
+        
+                                                <label>Marca:</label>
+                                                <div class="text-center">
+                                                    <input id="Obrand" type="text">
+                                        </div>
+                                        <label >Año:</label>
+                                        <div class=" text-center">
+                                                    <input id="Oyear" type="number">
+                                        </div>
+                                        <label >Categoria:</label>
+                                        <script>type="text/javascript"
+                                            window.onload = autoInicioCategoria();
+                                            </script>
+                                        <select id="select-category"></select>
+                                        
+                                        <div>
+                                        <label>Descripción:</label>
+                                            <div class=" text-center">
+                                                     <input id="Odescription" type="text">
+                                                </div>        
+                                                <div id="btnFormularioOrtopedic" class="text-center"><br>
+                                                    <input id="btnCrear" type="submit" onclick="guardarInformacionOrtopedic()"
+                                                        value="Crear Ortopedico" class="btn btn-light">
+                                                </div>
+                                            </div>
+                                            </form>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!-- INICIO DE CARRUSEL -->
+                        <div class="col-md-8 mt-3 ">
+                            <div id="carouselExampleIndicators "
+                                class="carousel carousel-dark slide border-4 border-bottom border-dark border-top border-dark"
+                                data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#imagenesEnCarrusel" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                        aria-label="Slide 4"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="category.html" class="card-link">
+                                            <img src="images/slideCategoria.jpg" class="d-block w-100" alt="slideCategoria">
+                                        </a>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Consulta las categorias </h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="message.html" class="card-link">
+                                            <img src="images/slideMensajes.jpg" class="d-block w-100" alt="slideMensajes">
+                                        </a>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Consulta los mensajes</h5>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="client.html" class="card-link">
+                                            <img src="images/slideClientes.jpg" class="d-block w-100" alt="slideClientes">
+                                        </a>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Consulta sobre los clientes</h5>
+        
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="reservation.html" class="card-link">
+                                            <img src="images/slideReservaciones.jpg" class="d-block w-100"
+                                                alt="slideReservaciones">
+                                        </a>
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Consulta las reservaciones</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>    
+        
+           <!-- SEPARADOR FINAL-->
+           <div class="container-lg-12">
+            <div id="separator2">
+                <div class="content">
+                    <h3 class="text-center  pt-2.5 h1 text-light">Reto 5, Ciclo 3 - Universidad Sergio
+                        Arboleda-MINTIC</h3>
+                    <h6 class="text-center pb-5  text-light"> ®2021</h6>
+        
+                </div>
+        
+            </div>
+        </div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>    

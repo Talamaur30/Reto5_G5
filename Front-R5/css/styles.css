@@ -1,0 +1,106 @@
+
+
+
+.navBar{
+    background: url(../images/bg-04.png),  linear-gradient(-45deg, rgb(0, 0, 0) 0%, rgb(107, 7, 7) 100% ); 
+}
+.card-border{
+    background: url(../images/bg-04.png),  linear-gradient(45deg, rgb(51, 23, 23) 0%, rgb(245, 239, 239) 45% );
+    border: solid 2px white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+.card-border:hover{
+    transform: scale(1.05);
+}
+
+#separator1{        
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    
+     
+}
+#separator1 .content{
+    background: url(../images/bg-04.png), linear-gradient(180deg, rgb(107, 7, 7) 0%, rgb(0, 0, 0) 150% );
+    width: 150%;
+    height: 60px;
+    margin-left: -25%;    
+    border-bottom-left-radius: 110%;
+    border-bottom-right-radius: 110%;
+    
+    
+}
+
+#tablas{
+    
+    background: linear-gradient(0deg, rgb(107, 7, 7) 0%, rgb(0, 0, 0) 50%);
+    background-repeat: repeat-x;
+    background-size: 100%;
+    margin-top: -10px;
+}
+
+#separator2{        
+    background-color : rgb(107, 7, 7);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+     
+}
+#separator2 .content{    
+    background: url(../images/bg-04.png), linear-gradient(180deg, rgb(107, 7, 7) 0%, rgb(0, 0, 0) 150% );
+    width: 150%;
+    height: 78px;
+    margin-left: -25%;
+    border-top-left-radius: 150%;
+    border-top-right-radius: 150%;
+}    
+
+
+
+.card-cat{
+    
+    background: url(../images/bg-04.png), rgb(107, 7, 7);
+    border: solid 2px black;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all ease-out 0.2s; 
+}
+
+.background-total{
+    background: url(../images/bg-transparent.png);
+}
+
+#separator3{        
+    background-color : rgb(248, 244, 244);
+    width: 100%;
+    overflow: hidden;
+    position: center;
+    z-index: 2;
+     
+}
+#separator3 .content3{    
+    background: url(../images/bg-04.png), linear-gradient(180deg, rgb(107, 7, 7) 0%, rgb(0, 0, 0) 150% );
+    width: 150%;
+    height: 78px;
+    margin-left: -25%;
+    border-top-left-radius: 150%;
+    border-top-right-radius: 150%;
+} 
+
+.imagen-fondo{
+
+    background: url(../images/bg-blanco.jpg);
+
+}
+
+.fondo-login{
+    background: linear-gradient(45deg rgb(107, 7, 7) 0%, rgb(0, 0, 0) 150% );
+    border: solid 2px black;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
