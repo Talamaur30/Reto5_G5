@@ -50,6 +50,11 @@ function traerInformacionCategorias(){
 }
 
 function guardarInformacionCategorias(){
+    if($("#name").val().length==0 || $("#description").val().length==0){
+        alert("Todos los campos son obligatorios")
+    }else{
+
+
     let var2 = {
         name:$("#name").val(),
         description:$("#description").val()
@@ -78,7 +83,7 @@ function guardarInformacionCategorias(){
     
     
         }
-        });
+        });}
 
 }
 
@@ -109,6 +114,11 @@ function borrarInformacionCategorias(idElemento){
 }
 
 function actualizarInformacionCategorias(idCategoria){
+    if($("#name").val().length==0 || $("#description").val().length==0){
+        alert("Todos los campos son obligatorios para actualizar")
+    }else{
+
+
     let myData={
         id:idCategoria,
         
@@ -141,7 +151,7 @@ function actualizarInformacionCategorias(idCategoria){
             alert("No se actualizo correctamente");
 
         }
-    });
+    });}
 
 }
 
@@ -179,6 +189,11 @@ function traerInformacionClient(){
 }
 
 function guardarInformacionClient(){
+    if($("#email").val().length==0 || $("#password").val().length==0 || $("#name").val().length==0 || $("#age").val().length==0){
+        alert("Todos los campos son obligatorios")
+    }else{
+
+
     let var2 = {
         email:$("#email").val(),
         password:$("#password").val(),
@@ -206,7 +221,7 @@ function guardarInformacionClient(){
               window.location.reload()
             alert("No se guardo correctamente el cliente");
         }
-        });
+        });}
 }
 
 function borrarInformacionClient(idClient){
@@ -236,6 +251,10 @@ function borrarInformacionClient(idClient){
 }
 
 function actualizarInformacionClient(idElemento){ 
+    if($("#email").val().length==0 || $("#password").val().length==0 || $("#name").val().length==0 || $("#age").val().length==0){
+        alert("Todos los campos son obligatorios para actualizar")
+    }else{
+
     let myData={
         idClient:idElemento,
         
@@ -273,7 +292,7 @@ function actualizarInformacionClient(idElemento){
             alert("No se actualizo correctamente");
 
         }
-    });
+    });}
 }
 
 //-----------------------------------------MENSAJES------------------------------------------//
@@ -309,6 +328,11 @@ function traerInformacionMessage(){
 }
 
 function guardarInformacionMessage(){
+    if($("#message").val().length==0 ){
+        alert("Todos los campos son obligatorios")
+    }else{
+
+
     let var2 = {
         messageText:$("#message").val(),
         
@@ -335,7 +359,7 @@ function guardarInformacionMessage(){
               window.location.reload()
             alert("No se guardo correctamente el mensaje");
         }
-        });
+        });}
 }
 
 function borrarInformacionMessage(idMessage){
@@ -365,6 +389,10 @@ function borrarInformacionMessage(idMessage){
 }
 
 function actualizarInformacionMessage(idElemento){ 
+    if($("#message").val().length==0 ){
+        alert("Todos los campos son obligatorios para actualizar")
+    }else{
+
     let myData={
         idMessage:idElemento,
         
@@ -400,7 +428,7 @@ function actualizarInformacionMessage(idElemento){
             alert("No se actualizo correctamente");
 
         }
-    });
+    });}
 }
 
 
@@ -458,6 +486,11 @@ function traerInformacionOrtopedic(){
 }
 
 function guardarInformacionOrtopedic(){
+    if($("#Oname").val().length==0 ||$("#Obrand").val().length==0 || $("#Oyear").val().length==0 || $("#Odescription").val().length==0){
+        alert("Todos los campos son obligatorios")
+    }else{
+
+
     let var2 = {
         name:$("#Oname").val(),
         brand:$("#Obrand").val(),
@@ -486,7 +519,7 @@ function guardarInformacionOrtopedic(){
               window.location.reload()
             alert("No se guardo correctamente el ortopedico");
         }
-        });
+        });}
 }
 
 function borrarInformacionOrtopedic(idElemento){
@@ -516,6 +549,10 @@ function borrarInformacionOrtopedic(idElemento){
 }
 
 function actualizarInformacionOrtopedic(idOrtopedic){
+    if($("#Oname").val().length==0 ||$("#Obrand").val().length==0 || $("#Oyear").val().length==0 || $("#Odescription").val().length==0){
+        alert("Todos los campos son obligatorios para actualizar")
+    }else{
+
     let myData={
         id:idOrtopedic,
         
@@ -552,7 +589,7 @@ function actualizarInformacionOrtopedic(idOrtopedic){
             alert("No se actualizo correctamente");
 
         }
-    });
+    });}
 
 }
 
@@ -589,6 +626,11 @@ function traerInformacionReservation(){
 }
 
 function guardarInformacionReservation(){
+    if($("#startDate").val().length==0 ||$("#devolutionDate").val().length==0 || $("#status").val().length==0){
+        alert("Todos los campos son obligatorios")
+    }else{
+
+
     let var2 = {
         startDate:$("#startDate").val(),
         devolutionDate:$("#devolutionDate").val(),
@@ -618,7 +660,7 @@ function guardarInformacionReservation(){
     
     
         }
-        });
+        });}
 
 }
 
@@ -648,6 +690,10 @@ function borrarInformacionReservation(idElemento){
 }
 
 function actualizarInformacionReservation(idElemento){ 
+    if($("#startDate").val().length==0 ||$("#devolutionDate").val().length==0 || $("#status").val().length==0){
+        alert("Todos los campos son obligatorios para actualizar")
+    }else{
+
     let myData={
         idReservation:idElemento,
         startDate:$("#startDate").val(),
@@ -680,6 +726,6 @@ function actualizarInformacionReservation(idElemento){
             alert("No se actualizo la reservacion");
 
         }
-    });
+    });}
 
 }
