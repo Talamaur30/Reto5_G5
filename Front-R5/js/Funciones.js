@@ -410,7 +410,7 @@ $(document).ready(function(){
 });
 
 function autoInicioOrtopedic(){
-    console.log("se esta ejecutando")
+    console.log("se esta ejecutando autoinitOrtopedic")
     $.ajax({
         url: "http://150.230.91.159:8080/api/Ortopedic/all",
         type: "GET",
@@ -421,7 +421,7 @@ function autoInicioOrtopedic(){
             let $select = $("#select-category");
             $.each(respuesta, function (id,name){
                 $select.append('<option value='+name.id+'>'+name.name+'</option>');
-                console.log("select" +name.id);
+                console.log("select" + name.id);
             });
         }    
 

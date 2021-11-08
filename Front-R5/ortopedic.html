@@ -111,9 +111,9 @@
                             <div class="card card-cat mb-5 mx-50 " style="width: 18rem;">
         
                                 <div class="card-body">
-                                    <div class="formulario py-5">
+                                    <div class="formulario ">
                                         <div class="col-md-12 text-center text-light ">
-                                            <h2>Crea un nuevo ortopedico</h2>
+                                            <h2>Crea un nuevo ortopédico</h2>
                                         </div>
                                         <div class="col-12 text-start text-light ">
                                             <form id="formularioOrtopedic">
@@ -127,21 +127,22 @@
                                                     <input id="Obrand" type="text">
                                         </div>
                                         <label >Año:</label>
-                                        <div class=" text-center">
+                                        <div class=" text-center mb-3">
                                                     <input id="Oyear" type="number">
                                         </div>
-                                        <label >Categoria:</label>
-                                        <script>type="text/javascript"
+                                        <div class="text-center mb-2">
+                                        <label>Categoria:</label>
+                                        <script> type="text/javascript"
                                             window.onload = autoInicioCategoria();
                                             </script>
                                         <select id="select-category"></select>
-                                        
+                                        </div>
                                         <div>
                                         <label>Descripción:</label>
                                             <div class=" text-center">
                                                      <input id="Odescription" type="text">
                                                 </div>        
-                                                <div id="btnFormularioOrtopedic" class="text-center"><br>
+                                                <div id="btnFormularioOrtopedic" class="text-center mt-4">
                                                     <input id="btnCrear" type="submit" onclick="guardarInformacionOrtopedic()"
                                                         value="Crear Ortopedico" class="btn btn-light">
                                                 </div>
@@ -152,10 +153,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        
         
                         <!-- INICIO DE CARRUSEL -->
-                        <div class="col-md-8 mt-3 ">
+                        <div class="col-md-8  mt-3 ">
                             <div id="carouselExampleIndicators "
                                 class="carousel carousel-dark slide border-4 border-bottom border-dark border-top border-dark"
                                 data-bs-ride="carousel">
@@ -219,6 +220,7 @@
         
                         </div>
                     </div>
+                </div>
                 </div>    
         
            <!-- SEPARADOR FINAL-->
